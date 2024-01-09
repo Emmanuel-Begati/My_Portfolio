@@ -5440,6 +5440,7 @@ dd {
   .card-started .profile,
   .content-sidebar .profile {
       height: auto;
+      top: -20px 
   }
   .card-started .profile.no-photo .slide,
   .content-sidebar .profile.no-photo .slide {
