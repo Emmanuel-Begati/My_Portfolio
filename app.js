@@ -1,36 +1,46 @@
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
-// const csvWriter = require('csv-writer').createObjectCsvWriter;
-const createCsvWriter = require('csv-writer').createObjectCsvWriter;
+const { createObjectCsvWriter, writeRecords } = require('csv-writer');
+
 const app = express();
 
-// Serve static files from the public folder
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.json());
+app.use(express.urlencoded({ extended: true })); // Use middleware to parse form data
 
-// Define the route for handling the POST request
-app.post('/send-email', (req, res) => {
-    const { email } = req.body;
+// Define the CSV file path
+const csvFilePath = 'emails.csv';
 
-    // Append the email to the CSV file
-    const csvWriter = createCsvWriter({
-        path: 'emails.csv',
-        header: [{ id: 'email', title: 'Email' }]
-    });
-
-    csvWriter.writeRecords([{ email }])
-        .then(() => {
-            console.log('Email added to CSV file');
-            res.sendStatus(200);
-        })
-        .catch((error) => {
-            console.error('Error adding email to CSV file:', error);
-            res.sendStatus(500);
-        });
+// Create the CSV writer with header if the file doesn't exist
+const csvWriter = createObjectCsvWriter({
+    path: csvFilePath,
+    header: [
+        { id: 'name', title: 'Name' },
+        { id: 'email', title: 'Email' },
+        { id: 'message', title: 'Message' }
+    ]
 });
 
-// Start the server
+// Create the CSV file with header if it doesn't exist
+// csvWriter.writeRecords([{ name: 'example', email: 'example@example.com', message: 'Hello, world!' }]);
+
+app.post('/send-email', async (req, res) => {
+    const { 'your-name': name, 'your-email': email, 'your-message': message } = req.body;
+
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Message:', message);
+
+    try {
+        // Append new record to the existing CSV file
+        await writeRecords([{ name, email, message }], { header: false, append: true, path: csvFilePath });
+        console.log('Data added to CSV file');
+        res.sendStatus(200);
+    } catch (error) {
+        console.error('Error adding data to CSV file:', error);
+        res.sendStatus(500);
+    }
+});
+
 const port = 3000;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
