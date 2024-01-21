@@ -1,37 +1,39 @@
 const express = require('express');
-const path = require('path');
-const fs = require('fs');
-// const csvWriter = require('csv-writer').createObjectCsvWriter;
+const bodyParser = require('body-parser');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
+
 const app = express();
+const port = 3000;
 
-// Serve static files from the public folder
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-// Define the route for handling the POST request
+const csvWriter = createCsvWriter({
+    path: 'form_data.csv',
+    header: [
+        { id: 'Name', title: 'Name' },
+        { id: 'Email', title: 'Email' },
+        { id: 'Message', title: 'Message' },
+    ],
+    append: true,
+});
+
 app.post('/send-email', (req, res) => {
-    const { email } = req.body;
+    const { 'your-name': yourName, 'your-email': yourEmail, 'your-message': yourMessage } = req.body;
 
-    // Append the email to the CSV file
-    const csvWriter = createCsvWriter({
-        path: 'emails.csv',
-        header: [{ id: 'email', title: 'Email' }]
-    });
+    const data = [{ Name: yourName, Email: yourEmail, Message: yourMessage }];
 
-    csvWriter.writeRecords([{ email }])
+    csvWriter.writeRecords(data)
         .then(() => {
-            console.log('Email added to CSV file');
-            res.sendStatus(200);
+            console.log('Data added to CSV file');
+            res.status(200).send('Data added to CSV file');
         })
         .catch((error) => {
-            console.error('Error adding email to CSV file:', error);
-            res.sendStatus(500);
+            console.error('Error adding data to CSV file:', error);
+            res.status(500).send('Error adding data to CSV file');
         });
 });
 
-// Start the server
-const port = 3000;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
