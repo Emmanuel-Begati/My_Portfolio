@@ -8,9 +8,8 @@ const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-// Serve static files from the 'public' folder
 app.use(express.static('public'));
+
 
 const csvFilePath = 'form_data.csv';
 
