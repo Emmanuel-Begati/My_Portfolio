@@ -18155,5 +18155,31 @@ document.addEventListener('DOMContentLoaded', function () {
     getTop3RecentRepositories();
 });
 
+function submitForm() {
+    fetch('/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            'your-name': document.getElementById('yourName').value,
+            'your-email': document.getElementById('yourEmail').value,
+            'your-message': document.getElementById('yourMessage').value,
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Show the modal with success message
+        showModal(data.message);
 
+        // You can also redirect after a delay if needed
+        setTimeout(() => {
+            window.location.href = '/';
+        }, 3000);
+    })
+    .catch(error => {
+        // Handle error and show an appropriate message
+        showModal('Error submitting form. Please try again.');
+    });
+}
 
