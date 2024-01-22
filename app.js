@@ -26,7 +26,6 @@ const csvWriter = createCsvWriter({
     append: true,
 });
 
-<<<<<<< HEAD
 app.post('/send-email', (req, res) => {
     const { 'your-name': yourName, 'your-email': yourEmail, 'your-message': yourMessage } = req.body;
 
@@ -39,7 +38,6 @@ app.post('/send-email', (req, res) => {
     }
 
     const data = [{ Name: yourName, Email: yourEmail, Message: yourMessage }];
-=======
 // Check if the file exists
 if (!fs.existsSync(csvFilePath)) {
     // If the file doesn't exist, write the header row
@@ -63,7 +61,6 @@ app.post('/send-email', (req, res) => {
     const timestamp = new Date().toLocaleString(); // Get the current timestamp in a readable format
 
     const data = [{ Name: yourName, Email: yourEmail, Message: yourMessage, Timestamp: timestamp }];
->>>>>>> davids-backend
 
     // Write the data to CSV and store it in the array
     csvWriter.writeRecords(data)
@@ -71,15 +68,11 @@ app.post('/send-email', (req, res) => {
             submittedData.push(data[0]);
 
             console.log('Data added to CSV file');
-<<<<<<< HEAD
             res.status(200).json({ success: true, message: 'Data added to CSV file' });
-=======
-            res.status(200).send('Data added to CSV file');
 
             // Send message to Telegram
             const message = `New message received:\nName: ${yourName}\nEmail: ${yourEmail}\nMessage: ${yourMessage}\nTimestamp: ${timestamp}`;
             bot.sendMessage(telegramChatId, message);
->>>>>>> davids-backend
         })
         .catch((error) => {
             console.error('Error adding data to CSV file:', error);
