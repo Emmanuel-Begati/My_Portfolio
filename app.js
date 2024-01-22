@@ -26,15 +26,18 @@ const csvWriter = createCsvWriter({
     append: true,
 });
 
+
 app.post('/send-email', (req, res) => {
     const { 'your-name': yourName, 'your-email': yourEmail, 'your-message': yourMessage } = req.body;
 
-    // Check if a record with the same name or email already exists
-    const duplicateRecord = submittedData.find(entry => entry.Name === yourName || entry.Email === yourEmail);
+    const allowedDuplicateCount = 3;
 
-    if (duplicateRecord) {
+    // Check if a record with the same name or email already exists
+    const duplicateRecord = submittedData.filter(entry => entry.Name === yourName || entry.Email === yourEmail).length;
+
+    if (duplicateRecord >= allowedDuplicateCount) {
         // Return a message indicating that the user has already submitted a form
-        return res.status(400).json({ success: false, message: 'You have already submitted a form.' });
+        return res.status(400).json({ success: false, message: 'You have already sent more than 3 messages!' });
     }
 
     const timestamp = new Date().toLocaleString(); // Get the current timestamp in a readable format
@@ -64,7 +67,7 @@ app.post('/send-email', (req, res) => {
             submittedData.push(data[0]);
 
             console.log('Data added to CSV file');
-            res.status(200).json({ success: true, message: 'Data added to CSV file' });
+            res.status(200).json({ success: true, message: 'Your message has been sent!' });
 
             // Send message to Telegram
             const message = `New message received:\nName: ${yourName}\nEmail: ${yourEmail}\nMessage: ${yourMessage}\nTimestamp: ${timestamp}`;
