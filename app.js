@@ -37,30 +37,26 @@ app.post('/send-email', (req, res) => {
         return res.status(400).json({ success: false, message: 'You have already submitted a form.' });
     }
 
-    const data = [{ Name: yourName, Email: yourEmail, Message: yourMessage }];
-// Check if the file exists
-if (!fs.existsSync(csvFilePath)) {
-    // If the file doesn't exist, write the header row
-    csvWriter.writeRecords([{ Name: 'Name', Email: 'Email', Message: 'Message', Timestamp: 'Timestamp' }])
-        .then(() => {
-            console.log('Header row added to CSV file');
-        })
-        .catch((error) => {
-            console.error('Error adding header row to CSV file:', error);
-        });
-}
-
-// Initialize Telegram bot
-const telegramBotToken = '6722579280:AAF0ESZWR7qifS0EFNAoFuyQfSxM4rMCSPs';
-const telegramChatId = '6801523118';
-const bot = new TelegramBot(telegramBotToken, { polling: false });
-
-app.post('/send-email', (req, res) => {
-    const { 'your-name': yourName, 'your-email': yourEmail, 'your-message': yourMessage } = req.body;
-
     const timestamp = new Date().toLocaleString(); // Get the current timestamp in a readable format
 
     const data = [{ Name: yourName, Email: yourEmail, Message: yourMessage, Timestamp: timestamp }];
+
+    // Check if the file exists
+    if (!fs.existsSync(csvFilePath)) {
+        // If the file doesn't exist, write the header row
+        csvWriter.writeRecords([{ Name: 'Name', Email: 'Email', Message: 'Message', Timestamp: 'Timestamp' }])
+            .then(() => {
+                console.log('Header row added to CSV file');
+            })
+            .catch((error) => {
+                console.error('Error adding header row to CSV file:', error);
+            });
+    }
+
+    // Initialize Telegram bot
+    const telegramBotToken = '6722579280:AAF0ESZWR7qifS0EFNAoFuyQfSxM4rMCSPs';
+    const telegramChatId = '6801523118';
+    const bot = new TelegramBot(telegramBotToken, { polling: false });
 
     // Write the data to CSV and store it in the array
     csvWriter.writeRecords(data)
