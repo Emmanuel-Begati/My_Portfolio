@@ -1,7 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
-
+const fs = require('fs');
+const TelegramBot = require('node-telegram-bot-api');
 const app = express();
 const port = 3000;
 
@@ -20,10 +21,12 @@ const csvWriter = createCsvWriter({
         { id: 'Name', title: 'Name' },
         { id: 'Email', title: 'Email' },
         { id: 'Message', title: 'Message' },
+        { id: 'Timestamp', title: 'Timestamp' },
     ],
     append: true,
 });
 
+<<<<<<< HEAD
 app.post('/send-email', (req, res) => {
     const { 'your-name': yourName, 'your-email': yourEmail, 'your-message': yourMessage } = req.body;
 
@@ -36,6 +39,31 @@ app.post('/send-email', (req, res) => {
     }
 
     const data = [{ Name: yourName, Email: yourEmail, Message: yourMessage }];
+=======
+// Check if the file exists
+if (!fs.existsSync(csvFilePath)) {
+    // If the file doesn't exist, write the header row
+    csvWriter.writeRecords([{ Name: 'Name', Email: 'Email', Message: 'Message', Timestamp: 'Timestamp' }])
+        .then(() => {
+            console.log('Header row added to CSV file');
+        })
+        .catch((error) => {
+            console.error('Error adding header row to CSV file:', error);
+        });
+}
+
+// Initialize Telegram bot
+const telegramBotToken = '6722579280:AAF0ESZWR7qifS0EFNAoFuyQfSxM4rMCSPs';
+const telegramChatId = '6801523118';
+const bot = new TelegramBot(telegramBotToken, { polling: false });
+
+app.post('/send-email', (req, res) => {
+    const { 'your-name': yourName, 'your-email': yourEmail, 'your-message': yourMessage } = req.body;
+
+    const timestamp = new Date().toLocaleString(); // Get the current timestamp in a readable format
+
+    const data = [{ Name: yourName, Email: yourEmail, Message: yourMessage, Timestamp: timestamp }];
+>>>>>>> davids-backend
 
     // Write the data to CSV and store it in the array
     csvWriter.writeRecords(data)
@@ -43,7 +71,15 @@ app.post('/send-email', (req, res) => {
             submittedData.push(data[0]);
 
             console.log('Data added to CSV file');
+<<<<<<< HEAD
             res.status(200).json({ success: true, message: 'Data added to CSV file' });
+=======
+            res.status(200).send('Data added to CSV file');
+
+            // Send message to Telegram
+            const message = `New message received:\nName: ${yourName}\nEmail: ${yourEmail}\nMessage: ${yourMessage}\nTimestamp: ${timestamp}`;
+            bot.sendMessage(telegramChatId, message);
+>>>>>>> davids-backend
         })
         .catch((error) => {
             console.error('Error adding data to CSV file:', error);
