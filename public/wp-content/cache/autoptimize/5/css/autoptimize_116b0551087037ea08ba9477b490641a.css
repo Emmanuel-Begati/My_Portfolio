@@ -823,19 +823,19 @@ form.submitting .wpcf7-spinner {
 @font-face {
   font-family: star;
   src: url(../../../../plugins/woocommerce/assets/fonts/star.eot);
-  src: url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../fonts/star.eot?#iefix) format("embedded-opentype"),
-      url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../fonts/star.woff) format("woff"), url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../fonts/star.ttf) format("truetype"),
-      url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../fonts/star.svg#star) format("svg");
+  src: url(wp-content/plugins/woocommerce/assets/css/../fonts/star.eot?#iefix) format("embedded-opentype"),
+      url(wp-content/plugins/woocommerce/assets/css/../fonts/star.woff) format("woff"), url(wp-content/plugins/woocommerce/assets/css/../fonts/star.ttf) format("truetype"),
+      url(wp-content/plugins/woocommerce/assets/css/../fonts/star.svg#star) format("svg");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: WooCommerce;
-  src: url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../fonts/WooCommerce.eot);
-  src: url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../fonts/WooCommerce.eot?#iefix) format("embedded-opentype"),
-      url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../fonts/WooCommerce.woff) format("woff"),
-      url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../fonts/WooCommerce.ttf) format("truetype"),
-      url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../fonts/WooCommerce.svg#WooCommerce) format("svg");
+  src: url(wp-content/plugins/woocommerce/assets/css/../fonts/WooCommerce.eot);
+  src: url(wp-content/plugins/woocommerce/assets/css/../fonts/WooCommerce.eot?#iefix) format("embedded-opentype"),
+      url(wp-content/plugins/woocommerce/assets/css/../fonts/WooCommerce.woff) format("woff"),
+      url(wp-content/plugins/woocommerce/assets/css/../fonts/WooCommerce.ttf) format("truetype"),
+      url(wp-content/plugins/woocommerce/assets/css/../fonts/WooCommerce.svg#WooCommerce) format("svg");
   font-weight: 400;
   font-style: normal;
 }
@@ -889,7 +889,7 @@ p.demo_store a {
   margin-top: -0.5em;
   content: "";
   animation: spin 1s ease-in-out infinite;
-  background: url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../images/icons/loader.svg) center center;
+  background: url(wp-content/plugins/woocommerce/assets/css/../images/icons/loader.svg) center center;
   background-size: cover;
   line-height: 1;
   text-align: center;
@@ -907,7 +907,7 @@ p.demo_store a {
   margin-top: -0.5em;
   content: "";
   animation: spin 1s ease-in-out infinite;
-  background: url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../images/icons/loader.svg) center center;
+  background: url(wp-content/plugins/woocommerce/assets/css/../images/icons/loader.svg) center center;
   background-size: cover;
   line-height: 1;
   text-align: center;
@@ -3034,7 +3034,7 @@ p.demo_store a {
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-cvc.visa,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-expiry.visa,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-number.visa {
-  background-image: url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/visa.svg);
+  background-image: url(wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/visa.svg);
 }
 #add_payment_method #payment div.payment_box .wc-credit-card-form-card-cvc.mastercard,
 #add_payment_method #payment div.payment_box .wc-credit-card-form-card-expiry.mastercard,
@@ -3045,7 +3045,7 @@ p.demo_store a {
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-cvc.mastercard,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-expiry.mastercard,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-number.mastercard {
-  background-image: url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/mastercard.svg);
+  background-image: url(wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/mastercard.svg);
 }
 #add_payment_method #payment div.payment_box .wc-credit-card-form-card-cvc.laser,
 #add_payment_method #payment div.payment_box .wc-credit-card-form-card-expiry.laser,
@@ -3056,7 +3056,7 @@ p.demo_store a {
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-cvc.laser,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-expiry.laser,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-number.laser {
-  background-image: url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/laser.svg);
+  background-image: url(wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/laser.svg);
 }
 #add_payment_method #payment div.payment_box .wc-credit-card-form-card-cvc.dinersclub,
 #add_payment_method #payment div.payment_box .wc-credit-card-form-card-expiry.dinersclub,
@@ -3067,7 +3067,7 @@ p.demo_store a {
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-cvc.dinersclub,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-expiry.dinersclub,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-number.dinersclub {
-  background-image: url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/diners.svg);
+  background-image: url(wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/diners.svg);
 }
 #add_payment_method #payment div.payment_box .wc-credit-card-form-card-cvc.maestro,
 #add_payment_method #payment div.payment_box .wc-credit-card-form-card-expiry.maestro,
@@ -3078,7 +3078,7 @@ p.demo_store a {
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-cvc.maestro,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-expiry.maestro,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-number.maestro {
-  background-image: url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/maestro.svg);
+  background-image: url(wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/maestro.svg);
 }
 #add_payment_method #payment div.payment_box .wc-credit-card-form-card-cvc.jcb,
 #add_payment_method #payment div.payment_box .wc-credit-card-form-card-expiry.jcb,
@@ -3089,7 +3089,7 @@ p.demo_store a {
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-cvc.jcb,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-expiry.jcb,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-number.jcb {
-  background-image: url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/jcb.svg);
+  background-image: url(wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/jcb.svg);
 }
 #add_payment_method #payment div.payment_box .wc-credit-card-form-card-cvc.amex,
 #add_payment_method #payment div.payment_box .wc-credit-card-form-card-expiry.amex,
@@ -3100,7 +3100,7 @@ p.demo_store a {
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-cvc.amex,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-expiry.amex,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-number.amex {
-  background-image: url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/amex.svg);
+  background-image: url(wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/amex.svg);
 }
 #add_payment_method #payment div.payment_box .wc-credit-card-form-card-cvc.discover,
 #add_payment_method #payment div.payment_box .wc-credit-card-form-card-expiry.discover,
@@ -3111,7 +3111,7 @@ p.demo_store a {
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-cvc.discover,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-expiry.discover,
 .woocommerce-checkout #payment div.payment_box .wc-credit-card-form-card-number.discover {
-  background-image: url(//ryancv.bslthemes.com/system/wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/discover.svg);
+  background-image: url(wp-content/plugins/woocommerce/assets/css/../images/icons/credit-cards/discover.svg);
 }
 #add_payment_method #payment div.payment_box span.help,
 .woocommerce-cart #payment div.payment_box span.help,
@@ -8701,14 +8701,14 @@ a.next.page-numbers:hover {
   right: 0;
   width: 50px;
   height: 50px;
-  background: url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/images/android-search.png) no-repeat center center;
+  background: url(wp-content/themes/ryancv/assets/images/android-search.png) no-repeat center center;
   background-size: 18px 18px;
   font-size: 0;
   border: none;
 }
 .search-form input.search-submit:hover,
 .wp-block-search .wp-block-search__button:hover {
-  background: url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/images/android-search.png) no-repeat center center;
+  background: url(wp-content/themes/ryancv/assets/images/android-search.png) no-repeat center center;
   background-size: 18px 18px;
 }
 .content-sidebar h2.widget-title,
@@ -10826,7 +10826,7 @@ body.page-template-elementor_canvas {
 .body-style-textured .custom-footer,
 .body-style-textured .mfp-wrap.popup-box-inline,
 .body-style-textured .preloader {
-  background-image: url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/images/noise-texture-dark.svg) !important;
+  background-image: url(wp-content/themes/ryancv/assets/images/noise-texture-dark.svg) !important;
   background-size: 50px 50px !important;
 }
 .card-started .profile .subtitle.subtitle-typed,
@@ -11306,7 +11306,7 @@ td {
 .textured-icons-style .fuct-items .fuct-item .icon,
 .textured-icons-style .resume-title .icon,
 .textured-icons-style .skill-title .icon {
-  background-image: url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/images/noise-texture.svg);
+  background-image: url(wp-content/themes/ryancv/assets/images/noise-texture.svg);
   background-size: 50px 50px;
 }
 body.body-style-dark .theme-style-textured .header .menu-btn,
@@ -11334,16 +11334,16 @@ body.body-style-dark .textured-icons-style .pricing-items .pricing-item .icon,
 body.body-style-dark .textured-icons-style .fuct-items .fuct-item .icon,
 body.body-style-dark .textured-icons-style .resume-title .icon,
 body.body-style-dark .textured-icons-style .skill-title .icon {
-  background-image: url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/images/noise-texture-dark.svg);
+  background-image: url(wp-content/themes/ryancv/assets/images/noise-texture-dark.svg);
   background-size: 50px 50px;
 }
 @media (max-width: 680px) {
   .theme-style-textured .header {
-      background-image: url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/images/noise-texture.svg);
+      background-image: url(wp-content/themes/ryancv/assets/images/noise-texture.svg);
       background-size: 50px 50px;
   }
   body.body-style-dark .theme-style-textured .header {
-      background-image: url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/images/noise-texture-dark.svg);
+      background-image: url(wp-content/themes/ryancv/assets/images/noise-texture-dark.svg);
       background-size: 50px 50px;
   }
 }
@@ -11457,10 +11457,10 @@ Modified icons to fit ionicon’s grid from original.
 @font-face {
   font-family: "Ionicons";
   src: url(../../../../themes/ryancv/assets/fonts/ionicons790f.eot?v=2.0.1);
-  src: url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../fonts/ionicons.eot?v=2.0.1#iefix) format("embedded-opentype"),
-      url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../fonts/ionicons.ttf?v=2.0.1) format("truetype"),
-      url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../fonts/ionicons.woff?v=2.0.1) format("woff"),
-      url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../fonts/ionicons.svg?v=2.0.1#Ionicons) format("svg");
+  src: url(wp-content/themes/ryancv/assets/css/../fonts/ionicons.eot?v=2.0.1#iefix) format("embedded-opentype"),
+      url(wp-content/themes/ryancv/assets/css/../fonts/ionicons.ttf?v=2.0.1) format("truetype"),
+      url(wp-content/themes/ryancv/assets/css/../fonts/ionicons.woff?v=2.0.1) format("woff"),
+      url(wp-content/themes/ryancv/assets/css/../fonts/ionicons.svg?v=2.0.1#Ionicons) format("svg");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -23197,11 +23197,11 @@ button.swiper-pagination-bullet {
   font-weight: 400;
   font-display: block;
   src: url(../../../../themes/ryancv/assets/webfonts/fa-brands-400.eot);
-  src: url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),
-      url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-brands-400.woff2) format("woff2"),
-      url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-brands-400.woff) format("woff"),
-      url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-brands-400.ttf) format("truetype"),
-      url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-brands-400.svg#fontawesome) format("svg");
+  src: url(wp-content/themes/ryancv/assets/css/../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),
+      url(wp-content/themes/ryancv/assets/css/../webfonts/fa-brands-400.woff2) format("woff2"),
+      url(wp-content/themes/ryancv/assets/css/../webfonts/fa-brands-400.woff) format("woff"),
+      url(wp-content/themes/ryancv/assets/css/../webfonts/fa-brands-400.ttf) format("truetype"),
+      url(wp-content/themes/ryancv/assets/css/../webfonts/fa-brands-400.svg#fontawesome) format("svg");
 }
 .fab {
   font-family: "Font Awesome 5 Brands";
@@ -23212,29 +23212,29 @@ button.swiper-pagination-bullet {
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-regular-400.eot);
-  src: url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),
-      url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-regular-400.woff2) format("woff2"),
-      url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-regular-400.woff) format("woff"),
-      url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-regular-400.ttf) format("truetype"),
-      url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-regular-400.svg#fontawesome) format("svg");
+  src: url(wp-content/themes/ryancv/assets/css/../webfonts/fa-regular-400.eot);
+  src: url(wp-content/themes/ryancv/assets/css/../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),
+      url(wp-content/themes/ryancv/assets/css/../webfonts/fa-regular-400.woff2) format("woff2"),
+      url(wp-content/themes/ryancv/assets/css/../webfonts/fa-regular-400.woff) format("woff"),
+      url(wp-content/themes/ryancv/assets/css/../webfonts/fa-regular-400.ttf) format("truetype"),
+      url(wp-content/themes/ryancv/assets/css/../webfonts/fa-regular-400.svg#fontawesome) format("svg");
 }
 .far {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
 }
-@font-face {
+/* @font-face {
   font-family: "Font Awesome 5 Free";
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-solid-900.eot);
-  src: url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),
-      url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-solid-900.woff2) format("woff2"),
-      url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-solid-900.woff) format("woff"),
-      url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-solid-900.ttf) format("truetype"),
-      url(//ryancv.bslthemes.com/system/wp-content/themes/ryancv/assets/css/../webfonts/fa-solid-900.svg#fontawesome) format("svg");
-}
+  src: url(wp-content/themes/ryancv/assets/css/../webfonts/fa-solid-900.eot);
+  src: url(wp-content/themes/ryancv/assets/css/../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),
+      url(wp-content/themes/ryancv/assets/css/../webfonts/fa-solid-900.woff2) format("woff2"),
+      url(wp-content/themes/ryancv/assets/css/../webfonts/fa-solid-900.woff) format("woff"),
+      url(wp-content/themes/ryancv/assets/css/../webfonts/fa-solid-900.ttf) format("truetype"),
+      url(wp-content/themes/ryancv/assets/css/../webfonts/fa-solid-900.svg#fontawesome) format("svg");
+} */
 .fa,
 .fas {
   font-family: "Font Awesome 5 Free";
